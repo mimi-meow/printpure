@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PrintPure</title>
+    <link rel="stylesheet" href="preview.css" />
+  </head>
+  <body class="theme-dark">
+    <div class="ambient">
+      <div class="ambient-orb orb-left"></div>
+      <div class="ambient-orb orb-center"></div>
+      <div class="ambient-orb orb-right"></div>
+    </div>
+
+    <div class="app">
+      <header class="topbar">
+        <div class="topbar-inner">
+          <div class="brand">
+            <span class="brand-title">PrintPure</span>
+            <span class="brand-divider"></span>
+            <div class="controls">
+              <button id="new-button" class="ghost" title="Run extraction again on the source tab">Re-Extract</button>
+              <button id="reset-button" class="ghost" title="Restore the current extracted article after manual removals">Reset</button>
+              <button id="undo-button" class="ghost" disabled>Undo (0)</button>
+              <span class="divider"></span>
+              <button id="theme-button" class="icon" title="Toggle theme">
+                <span class="icon-sun">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364-.707.707M6.343 17.657l-.707.707M16.95 16.95l.707.707M7.05 7.05l.707.707M12 8a4 4 0 100 8 4 4 0 000-8z" />
+                  </svg>
+                </span>
+                <span class="icon-moon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </div>
+          <div class="actions">
+            <button id="images-button" class="outline">Show Images</button>
+            <button id="print-button" class="primary">Print</button>
+          </div>
+        </div>
+      </header>
+
+      <main class="stage">
+        <section id="empty-state" class="empty">
+          <div class="empty-card">
+            <h1>Make any article print-perfect.</h1>
+            <p>
+              Open a page you want to print, then click the PrintPure extension icon.
+              We will clean it up and make it beautiful.
+            </p>
+            <button id="reparse-button" class="primary">Try Again</button>
+          </div>
+        </section>
+
+        <article id="paper" class="paper hidden">
+          <header id="article-header" class="paper-header">
+            <h1 id="article-title"></h1>
+            <p id="article-byline"></p>
+          </header>
+          <div id="article-content" class="paper-content"></div>
+        </article>
+      </main>
+    </div>
+
+    <div id="toast" class="toast hidden"></div>
+    <div id="loading" class="loading hidden">
+      <div class="spinner"></div>
+      <span>Purifying...</span>
+    </div>
+
+    <script src="preview.js" defer></script>
+  </body>
+</html>

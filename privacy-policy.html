@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PrintPure Privacy Policy</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #edf5ff;
+        --card: #ffffff;
+        --text: #17304f;
+        --muted: #5f7692;
+        --line: #d6e4f5;
+        --accent: #2b6fb2;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        background:
+          radial-gradient(circle at top left, rgba(255, 255, 255, 0.9), transparent 38%),
+          linear-gradient(180deg, #f3f9ff 0%, var(--bg) 100%);
+        color: var(--text);
+      }
+
+      main {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 48px 20px 80px;
+      }
+
+      .card {
+        background: rgba(255, 255, 255, 0.94);
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        box-shadow: 0 24px 60px rgba(37, 82, 138, 0.12);
+        padding: 36px;
+      }
+
+      h1, h2 {
+        margin: 0 0 16px;
+        line-height: 1.15;
+      }
+
+      h1 {
+        font-size: clamp(2rem, 4vw, 3.2rem);
+      }
+
+      h2 {
+        margin-top: 36px;
+        font-size: 1.35rem;
+      }
+
+      p, li {
+        font-size: 1.05rem;
+        line-height: 1.75;
+      }
+
+      .lede {
+        color: var(--muted);
+        font-size: 1.1rem;
+      }
+
+      .updated {
+        display: inline-block;
+        margin: 12px 0 8px;
+        color: var(--accent);
+        font-weight: 600;
+      }
+
+      ul {
+        padding-left: 22px;
+      }
+
+      a {
+        color: var(--accent);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <article class="card">
+        <h1>PrintPure Privacy Policy</h1>
+        <div class="updated">Last updated: March 23, 2026</div>
+        <p class="lede">
+          PrintPure is a Chrome extension that creates a cleaner, print-friendly preview
+          of the webpage you choose.
+        </p>
+
+        <h2>What PrintPure Accesses</h2>
+        <p>
+          When you click the extension on a webpage, PrintPure reads the current tab so it
+          can extract the main article content and open a clean preview.
+        </p>
+        <p>This means the extension handles:</p>
+        <ul>
+          <li>the current page URL</li>
+          <li>the current page's readable article content</li>
+        </ul>
+
+        <h2>What PrintPure Stores</h2>
+        <p>
+          PrintPure stores only the minimum local data needed for the preview experience:
+        </p>
+        <ul>
+          <li>the current extracted article in <code>chrome.storage.session</code></li>
+          <li>the source tab ID and preview tab ID in <code>chrome.storage.session</code></li>
+          <li>the source page URL in <code>chrome.storage.session</code></li>
+          <li>local display preferences such as theme and image visibility in browser local storage</li>
+        </ul>
+        <p>
+          Session storage is used so the preview can access the current extracted article
+          during the active browser session.
+        </p>
+
+        <h2>What PrintPure Does Not Do</h2>
+        <p>PrintPure does not:</p>
+        <ul>
+          <li>create user accounts</li>
+          <li>collect personal information</li>
+          <li>sell user data</li>
+          <li>send article content to external servers</li>
+          <li>run analytics or tracking</li>
+          <li>use data for advertising</li>
+        </ul>
+
+        <h2>Third-Party Services</h2>
+        <p>
+          PrintPure does not use third-party analytics, advertising, or remote
+          content-processing services in the current implementation.
+        </p>
+
+        <h2>Contact / Support</h2>
+        <p>
+          Replace this section with your real support email or website before publishing if
+          you want users or reviewers to contact you directly.
+        </p>
+      </article>
+    </main>
+  </body>
+</html>
